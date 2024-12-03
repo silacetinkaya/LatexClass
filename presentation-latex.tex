@@ -1,0 +1,557 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage{graphicx} % Görselleri eklemek için gerekli paket
+\usepackage{tikz} % Başlık tasarımı için
+\usepackage{pgffor}
+
+% Tema ve renk ayarları
+\usetheme{Copenhagen} % Modern bir tema
+\usecolortheme{dolphin} % Bir başka renk teması, daha pembe tonlarında olabilir
+
+% Özelleştirilmiş renkler
+\definecolor{myLila}{rgb}{0.75, 0.5, 1.0} % Pembe rengini tanımla
+\setbeamercolor{item}{fg=myLila} % Liste maddelerini pembe yap
+\setbeamercolor{title}{fg=myLila} % Başlık rengini pembe yap
+\setbeamercolor{frametitle}{fg=myLila} % Çerçeve başlık rengini pembe yap
+\setbeamercolor{subtitle}{fg=myLila}
+\setbeamercolor{author}{fg=myLila}
+\setbeamercolor{institute}{fg=myLila}
+\setbeamercolor{date}{fg=myLila}
+
+
+% Başlık bilgileri
+\title{\textbf{Academic Text Edition with LATEX
+Lecture \\ Project }}
+\subtitle{Exploring Europe}
+\author{\textbf{Sıla Çetinkaya}}
+\institute{University of Miskolc}
+\date{November 2024}
+
+
+
+% Fotoğrafı küçültülmüş şekilde kapak sayfasına ekleme
+\titlegraphic{
+    \begin{tikzpicture}[overlay]
+        \node[anchor=south east, xshift=-0.5cm, yshift=0.5cm] at (current page.south east) {\includegraphics[width=0.3\textwidth]{unnamed.jpg}};
+    \end{tikzpicture}
+}
+
+\begin{document}
+
+% Başlık sayfası
+\begin{frame}
+    \vspace{0.5cm}
+    \titlepage
+    \vfill
+    \centering
+    \textbf{\textit{"A journey through vibrant cultures and unforgettable memories."}}
+\end{frame}
+
+
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+
+\begin{frame}[plain]
+    \begin{center}
+    \includegraphics[width=0.8\textwidth]{image.png} % Adjust size for clarity
+    \begin{tikzpicture}[overlay, remember picture]
+        % Adjust coordinates to fit your map better
+        \node[draw, circle, red, fill=red, inner sep=1pt] (vienna) at (6, 4) {};  % Adjusted position
+        \node[draw, circle, blue, fill=blue, inner sep=1pt] (budapest) at (6.5, 4.5) {};
+        \node[draw, circle, green, fill=green, inner sep=1pt] (warsaw) at (5, 2) {};
+        \node[draw, circle, orange, fill=orange, inner sep=1pt] (tokaj) at (6.3, 4.7) {};
+        \node[draw, circle, purple, fill=purple, inner sep=1pt] (berlin) at (5.5, 2) {};
+        \node[draw, circle, yellow, fill=yellow, inner sep=1pt] (prague) at (6.5, 3) {};
+
+        % Label cities
+        \node at (6, 4) {\hyperlink{vienna}{\textcolor{red}{\textbf{Vienna}}}};
+        \node at (6.5, 4.5) {\hyperlink{budapest}{\textcolor{blue}{\textbf{Budapest}}}};
+        \node at (5, 2) {\hyperlink{warsaw}{\textcolor{green}{\textbf{Warsaw}}}};
+        \node at (6.3, 4.7) {\hyperlink{tokaj}{\textcolor{orange}{\textbf{Tokaj}}}};
+        \node at (5.5, 2) {\hyperlink{berlin}{\textcolor{purple}{\textbf{Berlin}}}};
+        \node at (6.5, 3) {\hyperlink{prague}{\textcolor{yellow}{\textbf{Prague}}}};
+    \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+
+% Her şehir için bölüm ve içerik
+\section{Budapest}
+\begin{frame}{Budapest}
+    \begin{itemize}
+        \item Budapest is the capital of Hungary, known for its stunning architecture and vibrant culture.
+        \item The city is divided by the Danube River and features many historical landmarks.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{A Moon Statue in Budapest}
+    \begin{center}
+        \includegraphics[width=0.8\textwidth, height=0.6\textheight, keepaspectratio]{/Users/silacetinkaya/Desktop/budapestjpg/budapest1.jpg}
+    \end{center}
+    \vspace{1 em}
+    \small
+    \textbf{} A Moon Statue in Budapest is a striking public art installation located in the heart of the city. The sculpture, resembling a crescent moon, is a symbol of creativity and inspiration, capturing the beauty of Budapest's nighttime skyline.
+\end{frame}
+
+\begin{frame}{St. Stephen's Square}
+    \begin{center}
+        \includegraphics[width=0.8\textwidth, height=0.6\textheight, keepaspectratio]{/Users/silacetinkaya/Desktop/budapestjpg/budapest2.jpg}
+    \end{center}
+    \vspace{1em}
+    \small
+    \textbf{} This central square in Pest is named after Hungary's first king, St. Stephen. It is surrounded by impressive architecture, including the St. Stephen’s Basilica, one of the largest churches in Hungary.
+\end{frame}
+
+\begin{frame}{The Danube River}
+    \begin{center}
+        \includegraphics[width=0.8\textwidth, height=0.6\textheight, keepaspectratio]{/Users/silacetinkaya/Desktop/budapestjpg/budapest3.jpg}
+    \end{center}
+    \vspace{1em}
+    \small
+    \textbf{} The Danube is the lifeblood of Budapest, running through the heart of the city. It is home to several landmarks such as the Parliament Building, Buda Castle, and the Chain Bridge, making it a perfect spot for a river cruise.
+\end{frame}
+
+\begin{frame}{Szimpla Kert}
+    \begin{center}
+        \includegraphics[width=0.8\textwidth, height=0.6\textheight, keepaspectratio]{/Users/silacetinkaya/Desktop/budapestjpg/budapest4.jpg}
+    \end{center}
+    \vspace{1em}
+    \small
+    \textbf{} A legendary ruin pub located in the Jewish quarter of Budapest. Szimpla Kert is known for its eclectic décor, vibrant atmosphere, and live music performances. It's a must-visit for those wanting to experience Budapest's unique nightlife.
+\end{frame}
+
+\begin{frame}{Light Art Museum}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.3\textwidth]{/Users/silacetinkaya/Desktop/budapestjpg/budapest5.jpg}
+        \hspace{0.05\textwidth}
+        \includegraphics[width=0.3\textwidth]{/Users/silacetinkaya/Desktop/budapestjpg/budapest6.jpg}
+     
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Fisherman's Bastion}
+    \begin{figure}
+        \centering
+        \begin{tabular}{c@{\hspace{0.02\textwidth}}c@{\hspace{0.02\textwidth}}c}
+            \includegraphics[width=0.25\textwidth]{/Users/silacetinkaya/Desktop/budapestjpg/budapest7.jpg} &
+            \includegraphics[width=0.25\textwidth]{/Users/silacetinkaya/Desktop/budapestjpg/budapest8.jpg} &
+            \includegraphics[width=0.25\textwidth]{/Users/silacetinkaya/Desktop/budapestjpg/budapest9.jpg}
+        \end{tabular}
+    \end{figure}
+\end{frame}
+
+
+
+
+\section{Tokaj}
+\begin{frame}{Tokaj}
+    \begin{itemize}
+        \item Tokaj is a historic wine region in Hungary, famous for its white wines.
+        \item Known for the Tokaji Aszú, a sweet wine produced from grapes affected by noble rot.
+        \item The region is a UNESCO World Heritage site, celebrated for its unique vineyards and wine cellars.
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Tokaj Castle}
+    \begin{figure}
+        \centering
+        \begin{tabular}{c@{\hspace{0.02\textwidth}}c@{\hspace{0.02\textwidth}}c@{\hspace{0.02\textwidth}}c}
+            \includegraphics[width=0.25\textwidth]{/Users/silacetinkaya/Desktop/tokajjpg/tokaj1.jpg} &
+            \includegraphics[width=0.25\textwidth]{/Users/silacetinkaya/Desktop/tokajjpg/tokaj2.jpg} &
+            \includegraphics[width=0.25\textwidth]{/Users/silacetinkaya/Desktop/tokajjpg/tokaj3.jpg} 
+        \end{tabular}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Wine Tasting}
+    \begin{figure}
+        \centering
+        \begin{tabular}{cccc}
+            \includegraphics[width=0.23\textwidth]{/Users/silacetinkaya/Desktop/tokajjpg/tokaj5.jpg} &
+            \includegraphics[width=0.23\textwidth]{/Users/silacetinkaya/Desktop/tokajjpg/tokaj6.jpg} &
+            \includegraphics[width=0.23\textwidth]{/Users/silacetinkaya/Desktop/tokajjpg/tokaj8.jpg}
+        \end{tabular}
+    \end{figure}
+\end{frame}
+
+
+
+
+\hypertarget{vienna_section}{}
+\section{Vienna}
+\begin{frame}{Vienna}
+    \begin{itemize}
+        \item Vienna is the capital of Austria, renowned for its classical music and stunning architecture.
+        \item The city is home to many historic sites, including palaces, churches, and museums.
+        \item Famous for its coffee culture, Vienna offers a blend of history and modern vibrancy.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Vienna Traffic Lights}
+    \begin{figure}
+        \centering
+        \begin{tabular}{c@{\hspace{0.02\textwidth}}c@{\hspace{0.02\textwidth}}c@{\hspace{0.02\textwidth}}c}
+            \includegraphics[width=0.25\textwidth]{/Users/silacetinkaya/Desktop/viennajpg/vienna1.jpg} &
+            \includegraphics[width=0.25\textwidth]{/Users/silacetinkaya/Desktop/viennajpg/vienna2.jpg} 
+        \end{tabular}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Vienna Canal}
+    \begin{figure}
+        \centering
+        \begin{tabular}{c@{\hspace{0.02\textwidth}}c@{\hspace{0.02\textwidth}}c@{\hspace{0.02\textwidth}}c}
+            \includegraphics[width=0.25\textwidth]{/Users/silacetinkaya/Desktop/viennajpg/vienna3.jpg} 
+                \end{tabular}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{St. Stephen's Cathedral}
+    \begin{figure}
+        \centering
+        \begin{tabular}{c@{\hspace{0.02\textwidth}}c@{\hspace{0.02\textwidth}}c@{\space{0.02\textwidth}}c}
+            \includegraphics[width=0.25\textwidth]{/Users/silacetinkaya/Desktop/viennajpg/vienna4.jpg} &
+            \includegraphics[width=0.25\textwidth]{/Users/silacetinkaya/Desktop/viennajpg/vienna5.jpg} 
+        \end{tabular}
+    \end{figure}
+\end{frame}
+
+
+\section{Warsaw}
+
+% Warsaw açıklama slaytı
+\begin{frame}{Warsaw}
+    \begin{itemize}
+        \item Capital city of Poland with a rich history
+        \item Known for its Old Town, a UNESCO World Heritage site
+        \item Rising as a vibrant cultural and economic center
+    \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Street Art in Warsaw: Graffiti Culture}
+    \begin{figure}
+        \centering
+        \begin{tabular}{c@{\hspace{0.02\textwidth}}c@{\hspace{0.02\textwidth}}c}
+            \includegraphics[width=0.25\textwidth]{/Users/silacetinkaya/Desktop/polandjpg/poland1.jpg} &
+            \includegraphics[width=0.25\textwidth]{/Users/silacetinkaya/Desktop/polandjpg/poland2.jpg} &
+            \includegraphics[width=0.25\textwidth]{/Users/silacetinkaya/Desktop/polandjpg/poland3.jpg}
+        \end{tabular}
+    \end{figure}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Palace of Culture and Science}
+    \begin{figure}
+        \centering
+        \begin{tabular}{c@{\hspace{0.02\textwidth}}c@{\hspace{0.02\textwidth}}c@{\space{0.02\textwidth}}c}
+            \includegraphics[width=0.25\textwidth]{/Users/silacetinkaya/Desktop/polandjpg/poland4.jpg}
+            \end{tabular}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{World of Amber}
+    \begin{figure}
+        \centering
+        \begin{tabular}{c@{\hspace{0.02\textwidth}}c@{\hspace{0.02\textwidth}}c@{\space{0.02\textwidth}}c}
+            \includegraphics[width=0.25\textwidth]{/Users/silacetinkaya/Desktop/polandjpg/poland5.jpg}
+            \end{tabular}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{Old Town}
+    \begin{figure}
+        \centering
+        \begin{tabular}{c@{\hspace{0.02\textwidth}}c@{\hspace{0.02\textwidth}}c}
+            \includegraphics[width=0.25\textwidth]{/Users/silacetinkaya/Desktop/polandjpg/poland7.jpg} &
+            \includegraphics[width=0.25\textwidth]{/Users/silacetinkaya/Desktop/polandjpg/poland6.jpg} &
+            \includegraphics[width=0.25\textwidth]{/Users/silacetinkaya/Desktop/polandjpg/poland8.jpg}
+        \end{tabular}
+    \end{figure}
+\end{frame}
+
+
+
+\begin{frame}{Experiencing the Chill of Warsaw}
+    \begin{figure}
+        \centering
+        \begin{tabular}{c@{\hspace{0.02\textwidth}}c@{\hspace{0.02\textwidth}}c@{\space{0.02\textwidth}}c}
+            \includegraphics[width=0.25\textwidth]{/Users/silacetinkaya/Desktop/polandjpg/poland9.jpg}&
+             \includegraphics[width=0.25\textwidth]{/Users/silacetinkaya/Desktop/polandjpg/poland10.jpg} 
+            \end{tabular}
+    \end{figure}
+\end{frame}
+
+
+
+\section{Prague}
+\begin{frame}{Prague}
+    \begin{itemize}
+        \item The capital of the Czech Republic, known for its medieval architecture
+        \item Charles Bridge and Prague Castle are must-visit sites
+        \item Known for its beer culture and Gothic-style churches
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Prague Castle}
+    \begin{figure}
+        \centering
+        \begin{tabular}{c@{\hspace{0.02\textwidth}}c}
+            \begin{minipage}{0.25\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{/Users/silacetinkaya/Desktop/praguejpg/prague1.jpg} \\
+                \footnotesize{View of Prague Castle}
+            \end{minipage} &
+            \begin{minipage}{0.25\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{/Users/silacetinkaya/Desktop/praguejpg/prague2.jpg} \\
+                \footnotesize{Inside the Castle Grounds}
+            \end{minipage}
+        \end{tabular}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Old Town}
+    \begin{figure}
+        \centering
+        \begin{tabular}{c@{\hspace{0.02\textwidth}}c@{\hspace{0.02\textwidth}}c}
+            \begin{minipage}{0.25\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{/Users/silacetinkaya/Desktop/praguejpg/prague9.jpg} \\
+                \footnotesize{Old Town View}
+            \end{minipage} &
+            \begin{minipage}{0.25\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{/Users/silacetinkaya/Desktop/praguejpg/prague10.jpg} \\
+                \footnotesize{Streets of Prague}
+            \end{minipage} &
+            \begin{minipage}{0.25\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{/Users/silacetinkaya/Desktop/praguejpg/prague14.jpg} \\
+                \footnotesize{Sunset in Prague}
+            \end{minipage}
+        \end{tabular}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Charles Bridge}
+    \begin{figure}
+        \centering
+        \begin{tabular}{c@{\hspace{0.02\textwidth}}c}
+            \begin{minipage}{0.25\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{/Users/silacetinkaya/Desktop/praguejpg/prague12.jpg} \\
+                \footnotesize{Charles Bridge at Dawn}
+            \end{minipage} &
+            \begin{minipage}{0.25\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{/Users/silacetinkaya/Desktop/praguejpg/prague13.jpg} \\
+                \footnotesize{Statues on Charles Bridge}
+            \end{minipage}
+        \end{tabular}
+    \end{figure}
+\end{frame}
+
+
+
+
+\begin{frame}{The Rotating Kafka Head Sculpture}
+    \begin{columns}
+        \column{0.5\textwidth}
+            \includegraphics[width=0.9\textwidth,height=0.6\textheight,keepaspectratio]{/Users/silacetinkaya/Desktop/praguejpg/prague3.jpg}
+        \column{0.5\textwidth}
+            \textbf{}  
+            A stunning rotating sculpture of Franz Kafka's head, designed by artist David Černý, showcasing Prague's modern art scene.
+    \end{columns}
+\end{frame}
+
+\begin{frame}{The John Lennon Wall}
+    \begin{columns}
+        \column{0.5\textwidth}
+            \includegraphics[width=0.9\textwidth,height=0.6\textheight,keepaspectratio]{/Users/silacetinkaya/Desktop/praguejpg/prague4.jpg}
+        \column{0.5\textwidth}
+            \textbf{}  
+            A colorful wall covered in graffiti and messages of peace and freedom, inspired by John Lennon and The Beatles.
+    \end{columns}
+\end{frame}
+
+\begin{frame}{The Narrowest Street in Prague}
+    \begin{columns}
+        \column{0.5\textwidth}
+            \includegraphics[width=0.9\textwidth,height=0.6\textheight,keepaspectratio]{/Users/silacetinkaya/Desktop/praguejpg/prague5.jpg}
+        \column{0.5\textwidth}
+            \textbf{}  
+             A quirky street with a pedestrian traffic light, known for being one of the narrowest streets in the city.
+    \end{columns}
+\end{frame}
+
+\begin{frame}{The Famous David Černý Sculpture near Kafka's Birthplace}
+    \begin{columns}
+        \column{0.5\textwidth}
+            \includegraphics[width=0.9\textwidth,height=0.6\textheight,keepaspectratio]{/Users/silacetinkaya/Desktop/praguejpg/prague6.jpg}
+        \column{0.5\textwidth}
+            \textbf{}  
+             A striking sculpture near Kafka's birthplace, adding a modern artistic touch to the historical area.
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Gingerbread Cookie Delight}
+    \begin{columns}
+        \column{0.5\textwidth}
+            \includegraphics[width=0.9\textwidth,height=0.6\textheight,keepaspectratio]{/Users/silacetinkaya/Desktop/praguejpg/prague7.jpg}
+        \column{0.5\textwidth}
+            \textbf{}  
+            Traditional gingerbread cookies, a delicious local treat, showcasing Prague’s culinary artistry.
+    \end{columns}
+\end{frame}
+
+\begin{frame}{The Astronomical Clock in Old Town Square}
+    \begin{columns}
+        \column{0.5\textwidth}
+            \includegraphics[width=0.9\textwidth,height=0.6\textheight,keepaspectratio]{/Users/silacetinkaya/Desktop/praguejpg/prague8.jpg}
+        \column{0.5\textwidth}
+            \textbf{}  
+            A medieval clock in Old Town Square, famous for its hourly show with moving figures like the twelve apostles.
+    \end{columns}
+\end{frame}
+
+\begin{frame}{The Vltava River View}
+    \begin{columns}
+        \column{0.5\textwidth}
+            \includegraphics[width=0.9\textwidth,height=0.6\textheight,keepaspectratio]{/Users/silacetinkaya/Desktop/praguejpg/prague11.jpg}
+        \column{0.5\textwidth}
+            \textbf{}  
+            The Vltava River offers picturesque views of Prague's historic landmarks and stunning architecture.
+    \end{columns}
+\end{frame}
+
+\begin{frame}{The Iconic Dancing House}
+    \begin{columns}
+        \column{0.5\textwidth}
+            \includegraphics[width=0.9\textwidth,height=0.6\textheight,keepaspectratio]{/Users/silacetinkaya/Desktop/praguejpg/prague15.jpg}
+        \column{0.5\textwidth}
+            \textbf{}  
+            A masterpiece of modern architecture, the Dancing House stands out with its unique, dynamic design.
+    \end{columns}
+\end{frame}
+
+
+
+\section{Berlin}
+\begin{frame}{Berlin}
+    \begin{itemize}
+        \item Berlin is Germany's capital, known for its rich history and vibrant culture.
+        \item Iconic landmarks include the Berlin Wall, historic churches, and modern architecture.
+        \item The city offers a unique blend of history, art, and nightlife.
+    \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Berlin Wall}
+    \begin{figure}
+        \centering
+        \begin{tabular}{c@{\hspace{0.02\textwidth}}c@{\hspace{0.02\textwidth}}c}
+            \includegraphics[width=0.25\textwidth]{/Users/silacetinkaya/Desktop/berlinjpg/berlin1.jpg} &
+            \includegraphics[width=0.25\textwidth]{/Users/silacetinkaya/Desktop/berlinjpg/berlin2.jpg}
+        \end{tabular}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Berlin Döner}
+    \begin{columns}
+        \column{0.5\textwidth}
+        \centering
+        \includegraphics[height=0.8\textheight,keepaspectratio]{/Users/silacetinkaya/Desktop/berlinjpg/berlin3.jpg}
+        \column{0.5\textwidth}
+        \textbf{} Berlin’s Döner kebab is a beloved street food, reflecting the city’s multicultural culinary scene. It’s a must-try for visitors.
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Neptune Fountain at Alexanderplatz}
+    \begin{columns}
+        \column{0.5\textwidth}
+        \centering
+        \includegraphics[height=0.8\textheight,keepaspectratio]{/Users/silacetinkaya/Desktop/berlinjpg/berlin4.jpg}
+        \column{0.5\textwidth}
+        \textbf{} Located in Alexanderplatz, this historic fountain depicts Neptune, the Roman god of the sea, and other mythological figures, adding charm to the central square.
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Berlin Mitte}
+    \begin{columns}
+        \column{0.5\textwidth}
+        \centering
+        \includegraphics[height=0.8\textheight,keepaspectratio]{/Users/silacetinkaya/Desktop/berlinjpg/berlin5.jpg}
+        \column{0.5\textwidth}
+        \textbf{} The central district of Berlin, Mitte is known for its blend of historical landmarks, trendy cafes, and cultural attractions.
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Berlin Cathedral (Berliner Dom)}
+    \begin{columns}
+        \column{0.5\textwidth}
+        \centering
+        \includegraphics[height=0.8\textheight,keepaspectratio]{/Users/silacetinkaya/Desktop/berlinjpg/berlin6.jpg}
+        \column{0.5\textwidth}
+        \textbf{} This magnificent Protestant cathedral is known for its stunning architecture and peaceful atmosphere. It’s a major landmark in the city.
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Pariser Platz}
+    \begin{columns}
+        \column{0.5\textwidth}
+        \centering
+        \includegraphics[height=0.8\textheight,keepaspectratio]{/Users/silacetinkaya/Desktop/berlinjpg/berlin7.jpg}
+        \column{0.5\textwidth}
+        \textbf{} A prestigious square located near the Brandenburg Gate, Pariser Platz is surrounded by embassies and cultural institutions, offering a glimpse of Berlin’s global presence.
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Kurfürstendamm}
+    \begin{columns}
+        \column{0.5\textwidth}
+        \centering
+        \includegraphics[height=0.8\textheight,keepaspectratio]{/Users/silacetinkaya/Desktop/berlinjpg/berlin8.jpg}
+        \column{0.5\textwidth}
+        \textbf{} Known as “Ku’damm,” this famous shopping street is filled with luxury boutiques, cafes, and theaters, making it a perfect place for a leisurely stroll.
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Royal Garden with Us in Front}
+    \begin{columns}
+        \column{0.5\textwidth}
+        \centering
+        \includegraphics[height=0.8\textheight,keepaspectratio]{/Users/silacetinkaya/Desktop/berlinjpg/berlin9.jpg}
+        \column{0.5\textwidth}
+        \textbf{} A peaceful and beautiful garden in Berlin, perfect for relaxing and capturing memorable moments, away from the city’s hustle and bustle.
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Conclusion}
+    \begin{center}
+        Exploring these cities was a journey of discovery, not just of landmarks but of cultures, histories, and people.\\
+        From the romantic streets of Prague to the artistic vibrancy of Berlin, every destination left me with memories I’ll treasure forever.\\[1em]
+        Thank you for joining me on this journey through Europe. I hope my experiences inspire you to embark on adventures of your own.
+    \end{center}
+\end{frame}
+
+
+\begin{frame}[plain]
+    \centering
+    \Huge{Thanks for listening!}
+\end{frame}
+
+
+
+
+\end{document}
+
